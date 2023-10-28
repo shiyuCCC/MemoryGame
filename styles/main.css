@@ -1,0 +1,157 @@
+/* Styles used to make everything work */
+
+/* Default styles for the body element */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url("../Images/background.jpg");
+    background-color: #FFD1DC;
+}
+
+p, .btn {
+    font-family: 'Architects Daughter', cursive;;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: 'The Girl Next Door', cursive;
+    font-weight: 700;
+    font-size: 5em;
+    
+}
+
+
+/* Styles for heading (h1) and instruction text */
+h1,
+.instructions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Additional style for instruction text */
+.instructions {
+    margin-bottom: 20px;
+}
+
+/* Styles for the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.narrow{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Styles for individual card */
+.card {
+    width: 120px;
+    height: 150px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Styles for card inner element */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Styles for the front and back of the card */
+.card .card-image,
+.card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+/* Additional styles for the front and back of the card */
+.card .card-image {
+    transform: rotateY(180deg);
+}
+
+.card .card-back {
+    transform: rotateY(0);
+}
+
+/* Style for flipped card */
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Styles for button */
+/* button {
+    display: block;
+    margin: 0 auto 20px;
+} */
+
+/* Additional style for flipped card */
+.card .card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.prompt{
+    text-align: center;
+    margin-top:40px;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.endH1 {
+    font-size: 100px;
+    margin-top: 100px;
+}
+
+.endP {
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+
+
+}
+
+.btn {
+    border: solid black 1px;
+}
+
+.btn:hover {
+    border: solid black 2px;
+}
+
+.btn-easy, .btn-easy:hover, .btn-easy:active {
+   background-color: #C1E1C1!important;
+}
+
+.btn-medium, .btn-medium:hover, .btn-medium:active {
+    background-color: #FDFD96!important;
+
+}
+
+button:hover {
+    font-weight: 800;
+}
+
+
+.btn-hard, .btn-hard:hover, .btn-hard:active {
+    background-color: #FF6961!important;
+}
+
+.restartBtn, .restartBtn:hover, .restartBtn:active {
+
+    background-color: lightcoral!important;
+
+}

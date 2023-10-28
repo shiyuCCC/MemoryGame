@@ -1,0 +1,75 @@
+<!-- Added instructions and jquery src link -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=The+Girl+Next+Door&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="gameIntro overflow-hidden mt-5">
+        <h1 class="memoryTitle">Memory</h1>
+        <div class="row">
+            <p class="instructions col-8 offset-2">Click a card to reveal it, then try to find its match.<br> Be
+                careful,
+                level medium and hard have attempt limits, wrong matches will
+                decrease your attempts! <br>Act swiftly and stay within the time limits on higher levels! Good Luck!</p>
+            <p class="prompt">Choose a level to start playing!</p>
+        </div>
+
+        <!-- Buttons -->
+        <nav class="level-selector">
+            <div class="row">
+                <button class="difficulty btn btn-easy col-8 offset-2 col-md-2 mb-2 rounded-pill"
+                    data-difficulty="easy">Easy</button>
+                <button class="difficulty btn btn-medium col-8 offset-2 col-md-2 offset-md-1 mb-2 rounded-pill"
+                    data-difficulty="medium">Medium</button>
+                <button class="difficulty btn btn-hard col-8 offset-2 col-md-2 offset-md-1 mb-2 rounded-pill"
+                    data-difficulty="hard">Hard</button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Attempt Counter -->
+    <div class="container overflow-hidden ">
+        <div class="row mt-3 output">
+            <p class="attempts text-end col-6 fs-3"></p>
+            <p class="timer text-start col-6 fs-3"></p>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button class="btn btn-secondary mb-3 px-3 restartBtn rounded-pill">Restart</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Gameboard -->
+    <div class="game-board"></div>
+
+    <h1 class='endGame endH1'> </h1>
+    <p class='endGame endP'></p>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="javascript/memory.js"></script>
+</body>
+
+</html>
